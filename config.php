@@ -1,11 +1,11 @@
 <?php
 
-//Define DB Params
+// Define DB Params
 define("DB_HOST", "localhost");
 define("DB_USER", "root");
 define("DB_PASS", "sqlpwd");
 define("DB_NAME", "shareboard");
 
-//Define URL
-define("ROOT_PATH", "/");
-define("ROOT_URL", "http://localhost/php.cc");
+// Define URL
+define("ROOT_PATH", "/shareboard/");
+define("ROOT_URL", "http://localhost/shareboard/");

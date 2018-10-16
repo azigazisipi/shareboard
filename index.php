@@ -1,5 +1,5 @@
-<?php 
-//include Config
+<?php
+// Include Config
 require('config.php');
 
 require('classes/Bootstrap.php');
@@ -16,7 +16,6 @@ require('models/user.php');
 
 $bootstrap = new Bootstrap($_GET);
 $controller = $bootstrap->createController();
-
-if ($controller) {
+if($controller){
 	$controller->executeAction();
 }

@@ -4,7 +4,7 @@ abstract class Model{
 	protected $stmt;
 
 	public function __construct(){
-		$this->dbh = new PDO("mysql:host".DB_HOST.";dbname".DB_NAME,DB_USER,DB_PASS);
+		$this->dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASS);
 	}
 
 	public function query($query){
@@ -13,20 +13,20 @@ abstract class Model{
 
 	//Binds the prep statement
 	public function bind($param, $value, $type = null){
-		if (is_null($type)){
-			switch (true) {
-				case is_int($value):
-				$type = PDO::PARAM_INT;
-				break;
-				case is_bool($value):
-				$type = PDO::PARAM_BOOL;
-				break;
-				case is_null($value):
-				$type = PDO::PARAM_NULL;
-				break;
-				default:
-				$type = PDO::PARAM_STR;
-			}
+ 		if (is_null($type)) {
+  			switch (true) {
+    			case is_int($value):
+      				$type = PDO::PARAM_INT;
+      				break;
+    			case is_bool($value):
+      				$type = PDO::PARAM_BOOL;
+      				break;
+    			case is_null($value):
+      				$type = PDO::PARAM_NULL;
+      				break;
+    				default:
+      				$type = PDO::PARAM_STR;
+  			}
 		}
 		$this->stmt->bindValue($param, $value, $type);
 	}
@@ -37,7 +37,10 @@ abstract class Model{
 
 	public function resultSet(){
 		$this->execute();
-		return $this->stmt->fetchALL(PDO::FETCH_ASSOC);
+		return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+	public function lastInsertId(){
+		return $this->dbh->lastInsertId();
+	}
 }
