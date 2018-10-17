@@ -2,10 +2,13 @@
 
 A web application that allows users to register, login and create posts with title, body and URL.
 
-## Install
+## Prerequisits
 
 * Download the project from [GitHub](https://github.com/azigazisipi/shareboard/archive/master.zip)
 * Download and install [Ampps](https://www.ampps.com/)
+
+## Installation and configuration
+
 * Run Ampps as administrator - thats important, ohterwise Ampps can't edit hostfile
 * Open Ammps dashbooard in a browser: localhost/ampps
 * Add domain shareboard
@@ -17,4 +20,10 @@ A web application that allows users to register, login and create posts with tit
 
 ![table_useers](https://user-images.githubusercontent.com/32300859/47093877-61702900-d22a-11e8-8348-7f4e8857dc77.PNG)
 
+* Edit the following line in config.php and change the password to your own MySQL password
 
+'''
+define("DB_PASS", "sqlpwd");
+'''
+* Open 'localhoast/shareboard' in your browser
+* Enjoy :-)
