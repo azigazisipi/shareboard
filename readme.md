@@ -22,8 +22,9 @@ A web application that allows users to register, login and create posts with tit
 
 * Edit the following line in config.php and change the password to your own MySQL password
 
-'''
+```
 define("DB_PASS", "sqlpwd");
-'''
+```
+
 * Open 'localhoast/shareboard' in your browser
 * Enjoy :-)
