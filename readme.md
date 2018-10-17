@@ -20,7 +20,7 @@ A web application that allows users to register, login and create posts with tit
 
 ![table_useers](https://user-images.githubusercontent.com/32300859/47093877-61702900-d22a-11e8-8348-7f4e8857dc77.PNG)
 
-* Unpack the donloaded "shareboard-master.zip" file and the content of 'shareboard-master' folder copi to \YOUR_PATH\Ampps\www\shareboard folder
+* Unpack the donloaded "shareboard-master.zip" file and the content of 'shareboard-master' folder copy to \YOUR_PATH\Ampps\www\shareboard folder
 * Edit the following line in config.php and change the password to your own MySQL password
 
 ```
